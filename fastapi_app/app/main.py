@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from .db import SessionLocal, Base, engine
 import os
 from contextlib import asynccontextmanager
-from app.routers import questions
 
 
 SKIP_DB_INIT = os.getenv("SKIP_DB_INIT", "0") == "1"
@@ -25,4 +24,10 @@ def get_db():
         db.close()
 
 
+from app.routers import (
+    questions,
+    answers
+)
+
 app.include_router(questions.router)
+app.include_router(answers.router)
