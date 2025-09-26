@@ -21,8 +21,6 @@ htmlcov/
 .mypy_cache/
 .ruff_cache/
 .pyright/
-.env
-.env.*
 !.env.example
 *.secret
 *.key
