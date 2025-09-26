@@ -43,5 +43,5 @@ class AnswerOut(BaseModel):
     model_config = ConfigDict(from_attributes=True)
 
 
-class QuestionWithAnswersOut(BaseModel):
+class QuestionWithAnswersOut(QuestionOut):
     answers: List[AnswerOut] = Field(default_factory=list)
