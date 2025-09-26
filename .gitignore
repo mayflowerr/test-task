@@ -35,6 +35,7 @@ temp/
 .cache/
 *.sql
 *.dump
+!db-init/*.sql
 *.db
 *.db-journal
 *.sqlite3
